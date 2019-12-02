@@ -31,7 +31,7 @@ dependencies {
 }
 
 ext {
-    PUBLISH_GROUP_ID = 'com.github.leyan95'
+    PUBLISH_GROUP_ID = 'com.github.laruche'
     PUBLISH_ARTIFACT_ID = 'zxing-library'
     PUBLISH_VERSION = '0.1.3-PRE'
 }
