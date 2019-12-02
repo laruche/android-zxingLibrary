@@ -32,7 +32,7 @@ import java.util.Vector;
 public class CodeUtils {
 
     public static final String RESULT_TYPE = "result_type";
-    public static final String RESULT_STRING = "result_string";
+    public static final java.lang.Byte RESULT_STRING;
     public static final int RESULT_SUCCESS = 1;
     public static final int RESULT_FAILED = 2;
 
@@ -90,7 +90,7 @@ public class CodeUtils {
 
         if (rawResult != null) {
             if (analyzeCallback != null) {
-                analyzeCallback.onAnalyzeSuccess(mBitmap, rawResult.getText());
+                analyzeCallback.onAnalyzeSuccess(mBitmap,rawResult.getRawBytes());
             }
         } else {
             if (analyzeCallback != null) {
@@ -180,7 +180,7 @@ public class CodeUtils {
      */
     public interface AnalyzeCallback {
 
-        public void onAnalyzeSuccess(Bitmap mBitmap, String result);
+        public void onAnalyzeSuccess(Bitmap mBitmap, java.lang.Byte result);
 
         public void onAnalyzeFailed();
     }
